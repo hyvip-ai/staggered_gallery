@@ -1,0 +1,92 @@
+.parent{
+    display: block;
+    height: 600px;
+    width: 800px;
+    /* border: 2px solid black; */
+    margin: 60px auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "box1 box2 box3 box3"
+                         "box1 box4 box5 box6"
+                         "box7 box7 box8 box6";
+}
+.child{
+    padding: 10px;
+}
+.parent .child img{
+    height: 100%;
+    width: 100%;
+    
+    object-fit: cover;
+}
+.first{
+    grid-area: box1;
+    object-position: center;
+    /* background-color: greenyellow; */
+}
+.first img{
+    object-position: 74%;
+}
+.second{
+
+    grid-area: box2;
+    /* background-color: gold; */
+}
+.second img{
+    object-position: 84%;
+
+}
+.third{
+    grid-area: box3;
+    /* background-color: hotpink; */
+
+}
+.fourth{
+    grid-area: box4;
+    /* background-color: rgb(73, 128, 19); */
+    
+}
+.fifth{
+grid-area: box5;
+/* background-color: tomato; */
+
+}
+.sixth{
+    grid-area: box6;
+    /* background-color: teal; */
+}
+.sixth img{
+    object-position: 78%;
+}
+.seventh{
+grid-area: box7;
+/* background-color: springgreen; */
+
+}
+.eighth{
+    grid-area: box8;
+
+    /* background-color: orange; */
+}
+.eighth img{
+    object-position: 36%;
+}
+
+@media(max-width:820px){
+    .parent{
+        width: 500px;
+    }
+}
+
+@media(max-width:535px){
+    .parent{
+        display: block;
+        width: 100%;
+
+    }
+    .parent .child{
+        width: 80%;
+        margin: 0px auto;
+    }
+}
